@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.3;
+}
+.media {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.8) 50%
+  );
+}
+.media header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+.loginForm {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  min-height: 500px;
+  min-width: 350px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+}
+.logo {
+  color: rgb(224, 108, 6);
+  font-weight: 600;
+  font-size: 2.2em;
+}
+#exampleInputEmail1 {
+  line-height: 1.5;
+  font-size: 1rem;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  filter: opacity(70%);
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.signIn {
+  color: rgb(255, 255, 255);
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.register {
+  color: #ffffff74;
+}
+.register a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+.submit {
+  background-color: rgba(224, 108, 6, 0.929) !important;
+}
+.media .text {
+  color: #fff;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loginInput {
+  font-size: 1rem;
+  width: 350px;
+  color: #fff;
+  padding: 10px;
+  filter: opacity(70%);
+  outline: none;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+.loginButton {
+  padding: 11px 40px;
+  border: none;
+  outline: none;
+  background-color: rgba(224, 108, 6, 0.929);
+  color: #fff;
+  font-size: 1em;
+}
+.registrationLink {
+  text-decoration: none;
+  color: rgba(224, 108, 6, 0.929);
+}
+
+/* home section */
+
+.homeSection {
+  width: 100%;
+  display: flex;
+}
+
+/* sidebar section */
+.sidebar {
+  border-right: 0.5px solid #44444424;
+}
+.sidebarHeading {
+  color: rgb(235, 67, 7);
+  font-size: 35px;
+  font-weight: 750;
+}
+.sideHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sidebarInput {
+  width: 232px;
+  padding: 5px 35px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 4px;
+  border: 0.5px solid #44444424;
+  background: url("assets/search-icon.png");
+  background-position: 6px 7px;
+  background-repeat: no-repeat;
+}
+.sidebarNavlink {
+  background-color: rgb(235, 67, 7) !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #44444424;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* searchSection */
+
+.searchSection {
+  width: 100vw;
+  padding: 30px 50px;
+}
+
+/* welcomeMessage */
+
+.welcomeMessage {
+  border: 2px solid rgb(235, 67, 7);
+  padding: 10px;
+  border-radius: 4px;
+}
+.highlight {
+  color: rgb(235, 67, 7);
+}
+
+/* searchmovies */
+.movieSearch {
+  width: 92%;
+  padding: 5px 35px;
+  font-size: 16px;
+  outline: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #44444424;
+  background-color: #fff !important;
+  background: url("assets/search-icon.png");
+  background-position: 6px 7px;
+  background-repeat: no-repeat;
+}
+.movieSearchButton {
+  width: 8%;
+  padding: 6px;
+  border: none;
+  color: #fff;
+  background-color: rgb(235, 67, 7);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* movie response */
+li {
+  list-style: none;
+}
+.response {
+  margin-top: 30px;
+}
+.row {
+  margin-left: -20px !important;
+  margin-top: 20px;
+}
+.card-img-top {
+  max-height: 300px;
+}
+.movieCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 430px;
+}
+
+/* .card-body {
+  flex-grow: 1;
+} */
+
+.card-title {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(160, 54, 15);
+}
+.myreact-icons {
+  color: red;
+  height: 2em;
+}
+
+.watchListMovieContainer {
+  width: 100%;
+  padding: 30px 50px;
+}
+.watchListcard {
+  height: 380px;
+}
+.myWatchList {
+  font-size: 17px;
+  padding: 5px;
+  margin: 0px;
+  border-radius: 4px;
+}
+
+/* moviedetails */
+.movieSection {
+  width: 100%;
+  background-color: rgb(241, 226, 214);
+  padding: 100px 30px;
+}
+.movieContainer {
+  border: 1px solid #444;
+  display: flex;
+  color: #deab75;
+  font-size: 30px;
+  background: linear-gradient(111.1deg, rgb(158, 96, 15) -4.8%, rgb(72, 46, 28) 82.7%, rgb(63, 38, 18) 97.2%);
+  width: 90%;
+
+}
+.movieDetails {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.warningMsg{
+  color: rgb(235, 67, 7);
+}
