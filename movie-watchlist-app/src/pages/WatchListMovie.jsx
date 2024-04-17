@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { MovieStore } from "../store/movie-store";
+import { Link } from "react-router-dom";
 const WatchListMovie = ({ data }) => {
   const { deleteMovie, setSection, setMovie } = useContext(MovieStore);
-  const handleMovieDetails = (section, movieObject) => {
-    setSection(section);
+  const handleMovieDetails = ( movieObject) => {
     setMovie(movieObject);
   };
   return (
@@ -14,7 +14,9 @@ const WatchListMovie = ({ data }) => {
         Embark on cinematic journeys with curated movie watchlists tailored to
         your every mood and taste.
       </p>
-      {data.length == 0 && <h5 className="warningMsg">Watchlist is empty !!</h5>}
+      {data.length == 0 && (
+        <h5 className="warningMsg">Watchlist is empty !!</h5>
+      )}
 
       <div className="container">
         <div className="row">
@@ -31,7 +33,7 @@ const WatchListMovie = ({ data }) => {
                 {movie.Poster !== "N/A" ? (
                   <img
                     src={movie.Poster}
-                    className="card-img-top"
+                    className="card-img-top watchListimg"
                     alt={movie.Title}
                   />
                 ) : (
@@ -45,13 +47,18 @@ const WatchListMovie = ({ data }) => {
                 )}
 
                 <div className="card-body">
-                  <p
-                    className="card-title"
-                    onClick={() => handleMovieDetails("moviedetails", movie)}
-                    style={{ cursor: "pointer" }}
+                  <Link
+                    to={"/movie-details"}
+                    style={{ textDecoration: "none" }}
                   >
-                    {movie.Title}
-                  </p>
+                    <p
+                      className="card-title"
+                      onClick={() => handleMovieDetails(movie)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      {movie.Title}
+                    </p>
+                  </Link>
                   <p className="card-text">
                     {parseInt(movie.Year.split("-")[0])} <br />
                   </p>

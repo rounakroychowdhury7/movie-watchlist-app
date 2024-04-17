@@ -168,6 +168,10 @@
   border-radius: 4px;
 }
 
+Link{
+  text-decoration: none;
+}
+
 /* searchSection */
 
 .searchSection {
@@ -222,7 +226,7 @@ li {
   margin-top: 20px;
 }
 .card-img-top {
-  max-height: 300px;
+  height: 250px !important;
 }
 .movieCard {
   display: flex;
@@ -232,7 +236,7 @@ li {
 .card {
   display: flex;
   flex-direction: column;
-  height: 430px;
+  max-height: 430px;
 }
 
 /* .card-body {
@@ -256,13 +260,16 @@ li {
   padding: 30px 50px;
 }
 .watchListcard {
-  height: 380px;
+  max-height: 380px;
 }
 .myWatchList {
   font-size: 17px;
   padding: 5px;
   margin: 0px;
   border-radius: 4px;
+}
+.watchListimg{
+  height: 200px !important;
 }
 
 /* moviedetails */

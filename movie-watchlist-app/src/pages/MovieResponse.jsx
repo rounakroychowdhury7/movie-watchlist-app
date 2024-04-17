@@ -4,11 +4,12 @@ import { MdBookmarkAdded } from "react-icons/md";
 import { MovieStore } from "../store/movie-store";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 const MovieResponse = ({ movies }) => {
   const { setSection, setMovie, addNewMovie } = useContext(MovieStore);
   const notify = () => toast("Movie added to Watchlist");
-  const handleMovieDetails = (section, movieObject) => {
-    setSection(section);
+  const handleMovieDetails = (movieObject) => {
+    console.log("movie object sent")
     setMovie(movieObject);
   };
   const handleAddMovie = (movieData) =>{
@@ -40,13 +41,15 @@ const MovieResponse = ({ movies }) => {
               )}
 
               <div className="card-body">
-                <p
-                  className="card-title"
-                  onClick={() => handleMovieDetails("moviedetails", movie)}
-                  style={{ cursor: "pointer" }}
-                >
-                  {movie.Title}
-                </p>
+                <Link to={"/movie-details"} style={{ textDecoration: "none" }}>
+                  <p
+                    className="card-title"
+                    onClick={() => handleMovieDetails(movie)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    {movie.Title}
+                  </p>
+                </Link>
                 <p className="card-text">
                   {parseInt(movie.Year.split("-")[0])}
                 </p>
